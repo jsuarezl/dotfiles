@@ -8,13 +8,13 @@
     (make-directory my-auto-save-dir)))
 ;; save backups to folder
 (setq backup-by-copying t      ; backup with copy
-      backup-directory-alist '(("." . "$HOME/.emacs-saves"))    ; backup to folder
+      backup-directory-alist '(("." . "~/.emacs-saves"))    ; backup to folder
       delete-old-versions t
       kept-new-versions 6
       kept-old-versions 2
       version-control t)       ; use versioned backups
 (setq auto-save-file-name-transforms
-      `((".*" "$HOME/.emacs-saves/" t)))
+      `((".*" "~/.emacs-saves/" t)))
 
 (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")      ; fix melpa
 
