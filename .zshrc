@@ -127,6 +127,8 @@ plugins=(
   zsh-autosuggestions
   ssh-agent
   gpg-agent
+  docker
+  docker-compose
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -165,3 +167,10 @@ alias ls="ls -lash --color=always"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/opt/homebrew/share/google-cloud-sdk/path.zsh.inc' ]; then . '/opt/homebrew/share/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc' ]; then . '/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc'; fi
+export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
